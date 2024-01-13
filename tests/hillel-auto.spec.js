@@ -12,7 +12,7 @@ test.describe('hillel auto', () =>{
         await page.goto("");
         await expect(page).toHaveURL("https://qauto.forstudy.space/");
         });
-        await test.step("click on button Sign up modal window", async () => {
+        await test.step("click on button Sign in modal window", async () => {
         await page.getByRole("button", { name: "Sign In" }).click()
         });
 
@@ -36,6 +36,8 @@ test.describe('hillel auto', () =>{
         await page.locator('Button', {hasText: "Register"}).click()
         await page.getByRole("link", { name: "Garage", exact: true })
         await page.locator("#userNavDropdown")
+                await page.pause()
+               // await expect(page.locator("#userNavDropdown")).toBeVisible()
         });
     })
 })
