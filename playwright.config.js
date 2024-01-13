@@ -23,6 +23,8 @@ module.exports = defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  // Glob patterns or regular expressions that match test files.
+  //testMatch: '*.spec.js',
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: `https://${process.env.AUTHENTICATION_NAME}:${process.env.AUTHENTICATION_PASSWORD}@qauto.forstudy.space`,
