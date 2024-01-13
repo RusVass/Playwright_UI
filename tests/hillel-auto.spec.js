@@ -34,10 +34,6 @@ test.describe('hillel auto', () =>{
 
         await test.step("click on Register button", async () => {
         await page.locator('Button', {hasText: "Register"}).click()
-        await page.getByRole("link", { name: "Garage", exact: true })
-        await page.locator("#userNavDropdown")
-                await page.pause()
-               // await expect(page.locator("#userNavDropdown")).toBeVisible()
         });
     })
 })
