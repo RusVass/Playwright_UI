@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+
 test.describe('hillel auto', () =>{
         test("creating a new user", async ({ page }) => {
         const emailInput = page.locator('#signupEmail')
@@ -34,7 +35,7 @@ test.describe('hillel auto', () =>{
 
         await test.step("click on Register button", async () => {
         await page.locator('Button', {hasText: "Register"}).click()
-        });
+        })
     })
 })
 
