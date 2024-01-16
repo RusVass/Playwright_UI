@@ -36,9 +36,16 @@ test.describe('hillel auto', () =>{
         await test.step("click on Register button", async () => {
         await page.locator('Button', {hasText: "Register"}).click()
         await expect(page.locator('div h1')).toBeVisible()
+                // const btn = page
+                // .getByRole("#userNavDropdown")
+                // .filter({hasText: "My profile"})
+                // await expect (btn).toBeVisible()
+
+
         })
     })
 })
+
 
 
 
