@@ -5,7 +5,7 @@ const randomNumber=() => {
        return Math.floor(Math.random() * 1000 + 1)
 }
 test.describe("Garage page tests", () => {
-     test.skip('add car', async ({page, context}) => {
+     test('add car', async ({page, context}) => {
              const addCar = new AddCar(page)
              const brand = "Porsche";
              const model = "Panamera";
@@ -30,17 +30,12 @@ test.describe("Garage page tests", () => {
              await addCar.addFuelExpenseButton.first().click();
              const liters = randomNumber();
              const cost = randomNumber();
-
              await addCar.liters.fill(liters.toString());
              await addCar.cost.fill(cost.toString());
-
              await addCar.inputMileage.click();
              await page.keyboard.press("ArrowUp");
-
              await addCar.clickAddButton.click();
-
              await expect(page.locator("tbody > tr")).toContainText(`${liters}L${cost}`);
-
       })
   })
 })
