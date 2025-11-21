@@ -2,7 +2,7 @@ import { test, request,expect } from '@playwright/test'
 
 test.describe('API testing', async ()=>{
 
-/*test.skip('API POST test', async ({page}) => {
+test.skip('API POST test', async ({page}) => {
     const response = await page.request.post('/api/auth/signin', {
         data: {
             "email": process.env.USER_EMAIL,
@@ -17,8 +17,8 @@ test.describe('API testing', async ()=>{
 
     await page.goto('/')
 
-})*/
-/*
+})
+
 
 test.skip('API test with separate context', async ({page}) => {
     const requestContext = await request.newContext()
@@ -37,11 +37,11 @@ test.skip('API test with separate context', async ({page}) => {
     await page.goto('/')
     await page.pause()
 })
-*/
 
 
 
-/*test.skip('API test with separate context 2', async () => {
+
+test.skip('API test with separate context 2', async () => {
     const api = await request.newContext()
     const response = await api.post('/api/auth/signin', {
         data: {
@@ -54,5 +54,5 @@ test.skip('API test with separate context', async ({page}) => {
     const resp = await response.json()
 
    // expect(resp.status).toEqual('ok')
-})*/
+})
 })
