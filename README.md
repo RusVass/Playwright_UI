@@ -31,10 +31,16 @@ A collection of Playwright end-to-end and API tests that validate the Qauto trai
 4. (Optional) replace assets under `fixtures/` with your own files.
 
 ## Running Tests
-- Full suite: `npx playwright test`.
-- Single spec: `npx playwright test tests/add-car.spec.ts`.
-- Headed/debug mode: `npx playwright test --debug`.
-- Refresh global state manually: `npx playwright test --global-setup ./global-setup.ts`.
+- `npm run test` – Playwright UI+API suite in headless mode.
+- `npm run test:headed` – the same suite with a visible browser.
+- `npm run test:debug` – launches Playwright Inspector for step-by-step debugging.
+- `npm run test:spec` – only `tests/add-car.spec.ts`.
+- `npm run test:global-setup` – executes the global setup in isolation.
+- Direct command examples (if you prefer `npx`):
+  - Full suite: `npx playwright test`.
+  - Single spec: `npx playwright test tests/add-car.spec.ts`.
+  - Headed/debug mode: `npx playwright test --debug`.
+  - Refresh global state manually: `npx playwright test --global-setup ./global-setup.ts`.
 
 ## Notes
 - Reports and traces live in `playwright-report/` and `test-results/`.
