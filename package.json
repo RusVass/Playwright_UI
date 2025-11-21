@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:spec": "playwright test tests/add-car.spec.ts",
+    "test:global-setup": "playwright test --global-setup ./global-setup.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
